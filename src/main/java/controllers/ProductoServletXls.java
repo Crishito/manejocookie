@@ -37,7 +37,7 @@ public class ProductoServletXls extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Lista de Productos</h1>");
 
-
+            //Imprime en el HTML un enlace "Exportar a Excel".
             out.println("<a href=\"" + req.getContextPath() + "/productos.xls\">Exportar a Excel</a>");
 
 

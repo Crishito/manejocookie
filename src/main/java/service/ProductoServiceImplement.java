@@ -15,7 +15,7 @@ public class ProductoServiceImplement implements ProductoService {
 
     /* Sobreescribimos el método */
     @Override
-    public List<Producto> Listar() {
+    public List<Producto> listar() {
         return Arrays.asList(
                 new Producto(1L, "Laptop", "Computación", 250.25),
                 new Producto(2L, "Refrigeradora", "Cocina", 745.13),

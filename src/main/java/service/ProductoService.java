@@ -11,5 +11,5 @@ import java.util.List;
 public interface ProductoService {
 
     /* Método que devuelve lista de productos */
-    List<Producto> Listar();
+    List<Producto> listar();
 }

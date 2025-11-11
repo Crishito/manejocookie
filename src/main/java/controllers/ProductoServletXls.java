@@ -23,11 +23,11 @@ public class ProductoServletXls extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ProductoService service = new ProductoServiceImplement();
-        List<Producto> productos = service.Listar();
+        List<Producto> productos = service.listar();
 
         resp.setContentType("text/html;charset=UTF-8");
-
         try (PrintWriter out = resp.getWriter()) {
+            //Creo la plantilla html
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -36,7 +36,11 @@ public class ProductoServletXls extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Lista de Productos</h1>");
-            out.println("<a href=\"/productos.xls\">Exportar a Excel</a>");
+
+
+            out.println("<a href=\"" + req.getContextPath() + "/productos.xls\">Exportar a Excel</a>");
+
+
             out.println("<table>");
             out.println("<tr>");
             out.println("<th>ID PRODUCTO</th>");
@@ -44,7 +48,7 @@ public class ProductoServletXls extends HttpServlet {
             out.println("<th>CATEGORIA</th>");
             out.println("<th>PRECIO</th>");
             out.println("</tr>");
-
+            // lleno mi tavla con los productos
             productos.forEach(p -> {
                 out.println("<tr>");
                 out.println("<td>" + p.getIdProducto() + "</td>");

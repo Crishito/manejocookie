@@ -30,7 +30,7 @@ public class Producto {
         this.precio = precio;
     }
 
-    // GETTERS AND SETTERS
+    // metodos getter a setter
     public void setIdProducto(Long idProducto) {
         this.idProducto = idProducto;
     }

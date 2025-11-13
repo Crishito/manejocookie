@@ -37,9 +37,7 @@ public class ProductoXlsServlet extends HttpServlet {
             // Configuración correcta para la descarga de Excel
             resp.setContentType("application/vnd.ms-excel");
             resp.setHeader("Content-Disposition", "attachment; filename=productos.xls");
-        } else {
-            // Configuración para la vista HTML
-            resp.setContentType("text/html;charset=UTF-8");
+
         }
 
         try (PrintWriter out = resp.getWriter()) {
